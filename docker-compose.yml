@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  database:
+    image: mysql
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: "rest_api_springboot"
+      MYSQL_ROOT_PASSWORD: ""
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
